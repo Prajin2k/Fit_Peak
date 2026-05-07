@@ -1,0 +1,117 @@
+.whyus {
+  padding: 6rem 0;
+}
+
+.whyus__top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.whyus__right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.whyus__perk {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.whyus__perk:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.whyus__perk-icon {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.whyus__perk-title {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.3rem;
+  color: var(--text);
+}
+
+.whyus__perk-desc {
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+/* Numbers bar */
+.whyus__numbers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.whyus__number {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border-right: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.whyus__number:last-child {
+  border-right: none;
+}
+
+.whyus__number:hover {
+  background: rgba(232, 255, 71, 0.03);
+}
+
+.whyus__number-val {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
+.whyus__number-lbl {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .whyus__top {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .whyus__numbers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .whyus__number:nth-child(2) { border-right: none; }
+  .whyus__number:nth-child(3) { border-right: 1px solid var(--border); }
+  .whyus__number:nth-child(1),
+  .whyus__number:nth-child(2) {
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+@media (max-width: 480px) {
+  .whyus__numbers {
+    grid-template-columns: 1fr 1fr;
+  }
+  .whyus { padding: 4rem 0; }
+}
