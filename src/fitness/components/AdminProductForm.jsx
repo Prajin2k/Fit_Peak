@@ -13,7 +13,9 @@ export default function AdminProductForm({
   isEditing,
   updateProduct,
 imageFit,
-setImageFit
+  setImageFit,
+imagePosition,
+setImagePosition
 }) {
 
   return (
@@ -45,12 +47,34 @@ setImageFit
             onChange={(e) => setPrice(e.target.value)}
           />
 
-          <input
-            type="text"
-            placeholder="Category"
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
-          />
+          <select
+  value={category}
+  onChange={(e) =>
+    setCategory(e.target.value)
+  }
+>
+
+  <option value="">
+    Select Category
+  </option>
+
+  <option value="Strength">
+    Strength
+  </option>
+
+  <option value="Cardio">
+    Cardio
+  </option>
+
+  <option value="Recovery">
+    Recovery
+  </option>
+
+  <option value="Apparel">
+    Apparel
+  </option>
+
+</select>
 
           <input
             type="text"

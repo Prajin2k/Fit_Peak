@@ -188,7 +188,11 @@ const editProduct = (product) => {
   setEditingId(product._id);
 
   setIsEditing(true);
+setImageFit(product.imageFit || "cover");
 
+setImagePosition(
+  product.imagePosition || "center"
+);
   
 
 };
@@ -207,11 +211,13 @@ const editProduct = (product) => {
           },
 
           body: JSON.stringify({
-            name,
-            price,
-            category,
-            image,
-          }),
+  name,
+  price,
+  category,
+  image,
+  imageFit,
+  imagePosition
+}),
         }
       );
 
@@ -257,22 +263,22 @@ const editProduct = (product) => {
   role === "admin" && !isEditing && (
 
     <AdminProductForm
-      name={name}
-      setName={setName}
-      price={price}
-      setPrice={setPrice}
-      category={category}
-      setCategory={setCategory}
-      addProduct={addProduct}
-      isEditing={isEditing}
-      updateProduct={updateProduct}
-      image={image}
-            setImage={setImage}
-            imageFit={imageFit}
-            setImageFit={setImageFit}
-            imagePosition={imagePosition}
-setImagePosition={setImagePosition}
-    />
+  name={name}
+  setName={setName}
+  price={price}
+  setPrice={setPrice}
+  category={category}
+  setCategory={setCategory}
+  image={image}
+  setImage={setImage}
+  addProduct={addProduct}
+  isEditing={isEditing}
+  updateProduct={updateProduct}
+  imageFit={imageFit}
+  setImageFit={setImageFit}
+  imagePosition={imagePosition}
+  setImagePosition={setImagePosition}
+/>
 
   )
 }
@@ -373,18 +379,22 @@ setImagePosition={setImagePosition}
       <div className="edit-popup__content">
 
         <AdminProductForm
-          name={name}
-          setName={setName}
-          price={price}
-          setPrice={setPrice}
-          category={category}
-          setCategory={setCategory}
-          image={image}
-          setImage={setImage}
-          addProduct={addProduct}
-          isEditing={isEditing}
-          updateProduct={updateProduct}
-        />
+  name={name}
+  setName={setName}
+  price={price}
+  setPrice={setPrice}
+  category={category}
+  setCategory={setCategory}
+  image={image}
+  setImage={setImage}
+  addProduct={addProduct}
+  isEditing={isEditing}
+  updateProduct={updateProduct}
+  imageFit={imageFit}
+  setImageFit={setImageFit}
+  imagePosition={imagePosition}
+  setImagePosition={setImagePosition}
+/>
 
       </div>
 

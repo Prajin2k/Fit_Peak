@@ -106,3 +106,25 @@
   background: crimson !important;
   color: white !important;
 }
+.admin-form select {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  background: #111318;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.admin-form select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(232,255,71,0.15);
+}
+
+.admin-form select option {
+  background: #111318;
+  color: white;
+}

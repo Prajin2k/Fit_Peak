@@ -23,6 +23,16 @@ const ProductSchema = new mongoose.Schema({
       "https://images.unsplash.com/photo-1517836357463-d25dfeac3438"
   },
 
+  imageFit: {
+    type: String,
+    default: "cover"
+  },
+
+  imagePosition: {
+    type: String,
+    default: "center"
+  },
+
   rating: {
     type: Number,
     default: 4.5

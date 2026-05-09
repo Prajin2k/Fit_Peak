@@ -136,7 +136,7 @@ export default function Products({
 
               <div className="product-card__img">
 
-              <img
+             <img
   src={
     product.image && product.image.trim() !== ""
       ? product.image
@@ -146,7 +146,10 @@ export default function Products({
   className="product-card__image"
   style={{
     objectFit:
-      product.imageFit || "cover"
+      product.imageFit || "cover",
+
+    objectPosition:
+      product.imagePosition || "center"
   }}
 />
 

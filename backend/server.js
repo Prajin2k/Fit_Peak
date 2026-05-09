@@ -109,13 +109,13 @@ app.post("/add-product", async (req, res) => {
   try {
 
     const product = new Product({
-
-      name: req.body.name,
-      price: req.body.price,
-      category: req.body.category,
-      image: req.body.image
-
-    });
+  name: req.body.name,
+  price: req.body.price,
+  category: req.body.category,
+  image: req.body.image,
+  imageFit: req.body.imageFit,
+  imagePosition: req.body.imagePosition
+});
 
     await product.save();
 
@@ -167,17 +167,16 @@ app.put("/update-product/:id", async (req, res) => {
 
   try {
 
-    await Product.findByIdAndUpdate(
-      req.params.id,
-      {
+    await Product.findByIdAndUpdate(req.params.id, {
 
-        name: req.body.name,
-        price: req.body.price,
-        category: req.body.category,
-        image: req.body.image
+  name: req.body.name,
+  price: req.body.price,
+  category: req.body.category,
+  image: req.body.image,
+  imageFit: req.body.imageFit,
+  imagePosition: req.body.imagePosition
 
-      }
-    );
+});
 
     res.send("Product Updated Successfully");
 
